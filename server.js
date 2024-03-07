@@ -16,17 +16,45 @@ app.set('views', './views')
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
+// Zorg dat werken met Express data makkelijker wordt
+app.use(express.urlencoded({extended: true}))
+
 // Maak een GET route voor de index
 app.get('/', function (request, response) {
+
+  //Fetch data uit de API en geef parameter door
+  fetchJson(apiUrl).then((housesData) => {
+
   // Render index.ejs uit de views map en geef uit FDND API opgehaalde data mee
-  response.render('home')
+  response.render('home', {houses: housesData.data})    
+  });
+
 })
+
+
+
+// Haal data op uit de Funda API, ga pas verder als de data gedownload is
+// const houses = await fetchJson('https://fdnd-agency.directus.app/items/f_houses')
+// const favoriteList = await fetchJson('https://fdnd-agency.directus.app/items/f_list')
+// const housesImages = await fetchJson('https://fdnd-agency.directus.app/items/f_houses_files')
+
+
+const apiUrl = 'https://fdnd-agency.directus.app/items/f_houses';
+
+
+
+
+
 
 // Maak een POST route voor de index
 app.post('/', function (request, response) {
   // Er is nog geen afhandeling van POST, redirect naar GET op /
   response.redirect(303, '/')
 })
+
+
+
+
 
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8000)

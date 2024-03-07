@@ -1,2 +1,17 @@
+<%- include('partials/header', {current: '/home'}); %>
+<%- include('partials/navigation', {current: '/home'}); %>
+
 <h1>Homepage</h1>
-<img src="https://github.com/Jaywesterlow/server-side-rendering-server-side-website/assets/70646576/8ecfdceb-87cd-4442-ba66-124f06fb81b5">
+
+<main>
+ 
+<% houses.forEach(house => { %>
+    <ul>
+        <li>
+            <h2><%= house.street %></h2>
+            <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="house image" style="max-width: 50%;">
+        </li>
+    </ul>
+<% }); %>
+
+<%- include('partials/footer', {current: '/home'}); %>
