@@ -1,0 +1,39 @@
+main > ul.favorites {
+
+    & li {
+        background-color: var(--regent-blue);
+        margin-bottom: 2rem;
+        border-radius: 2rem;
+    }
+
+    & > li > figure  {
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(#000, #000, rgba(0,0,0,0));
+        mask-image: linear-gradient(#000, #000, rgba(0,0,0,0));
+
+        & img {
+            width: 100%;
+            display: block;
+        }
+    }
+    
+    & > li > article  {
+        padding:  1rem 1.5rem;
+
+        & h2 > a {
+            color: var(--bahama-blue);
+            font-size: 1.75rem;
+            margin-bottom: .4rem;
+        }
+
+        & p {
+            margin-bottom: .2rem;
+        }
+    }
+
+    & button {
+        
+    }
+}

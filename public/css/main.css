@@ -1,23 +1,23 @@
 @font-face {
-  font-family: "Bold";
+  font-family: "bold";
   font-style: normal;
   src: url(../fonts/ProximaNova-Bold_1760577842[2252].otf);
 }
 
 @font-face {
-  font-family: "Medium";
+  font-family: "medium";
   font-style: normal;
   src: url(../fonts/ProximaNova-Medium_2770618388[2258].otf);
 }
 
 @font-face {
-  font-family: "Regular";
+  font-family: "regular";
   font-style: normal;
   src: url(../fonts/ProximaNova-Regular_2607783814.otf);
 }
 
 @font-face {
-  font-family: "Semibold";
+  font-family: "semibold";
   font-style: normal;
   src: url(../fonts/ProximaNova-Semibold_3872794340.otf);
 }
@@ -108,16 +108,19 @@ body {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 2.5rem;
     font-family: "Semibold";
 }
 
 h2 {
-    font-size: 20px;
-    font-family: "Semibold";
+    font-size: 2rem;
+    font-family: "regular";
 }
 
 p {
-    font-size: 16px;
-    font-family: "Semibold";
+    font-size: 1.25rem;
+    font-family: "medium";
+}
+h1, h2, h3, h4, h5, h6, p {
+  color: rgba(var(--mine-shaft), 1);
 }
