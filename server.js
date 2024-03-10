@@ -31,30 +31,13 @@ app.get('/', function (request, response) {
 
 })
 
-
-
-// Haal data op uit de Funda API, ga pas verder als de data gedownload is
-// const houses = await fetchJson('https://fdnd-agency.directus.app/items/f_houses')
-// const favoriteList = await fetchJson('https://fdnd-agency.directus.app/items/f_list')
-// const housesImages = await fetchJson('https://fdnd-agency.directus.app/items/f_houses_files')
-
-
 const apiUrl = 'https://fdnd-agency.directus.app/items/f_houses';
-
-
-
-
-
 
 // Maak een POST route voor de index
 app.post('/', function (request, response) {
   // Er is nog geen afhandeling van POST, redirect naar GET op /
   response.redirect(303, '/')
 })
-
-
-
-
 
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8000)
