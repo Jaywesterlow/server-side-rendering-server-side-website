@@ -15,22 +15,23 @@
     </div>
 </form>
  
+<ul class="favorites">
 <% houses.forEach(house => { %>
-    <ul class="favorites">
         <li>
             <figure>
                 <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="house image">
             </figure>
             <article>
-                <h2><a href="#"><%= house.street %> <%= house.house_nr + house.nr_addition%></a></h2>
+                <h2><a href="#"><%= house.street %> <%= house.house_nr%><%= house.nr_addition?house.nr_addition:''%></a></h2>
                 <p><%= house.postal_code %> <%= house.city%></p>
                 <p><%= "€" + house.price %></p>
             </article>
             <button></button>
-            <button></button>
+            <a href="/?sort=price"> Prijs</a>
             <button class="heart"></button>
         </li>
+        <% }); %>
     </ul>
-<% }); %>
 
 <%- include('partials/footer', {current: '/home'}); %>
+<%- include('partials/foot', {current: '/home'}); %>
