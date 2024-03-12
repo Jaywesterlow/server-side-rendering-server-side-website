@@ -21,14 +21,18 @@
             <figure>
                 <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="house image">
             </figure>
-            <article>
-                <h2><a href="#"><%= house.street %> <%= house.house_nr%><%= house.nr_addition?house.nr_addition:''%></a></h2>
-                <p><%= house.postal_code %> <%= house.city%></p>
-                <p><%= "€" + house.price %></p>
-            </article>
-            <button></button>
-            <a href="/?sort=price"> Prijs</a>
-            <button class="heart"></button>
+            <div>
+                <article>
+                    <h2><a href="#"><%= house.street %> <%= house.house_nr%><%= house.nr_addition?house.nr_addition:''%></a></h2>
+                    <p><%= house.postal_code %> <%= house.city%></p>
+                    <p><%= "€" + house.price %></p>
+                </article>
+                <aside>
+                    <button></button>
+                    <a href="#">Details</a>
+                    <button class="heart"></button>
+                </aside>
+            </div>
         </li>
         <% }); %>
     </ul>
