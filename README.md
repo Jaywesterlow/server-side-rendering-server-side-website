@@ -14,11 +14,19 @@ Dit is de README van de Funda Favorieten website. Hierin wordt alles over het pr
 
 ## Gebruik
 
+
+
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
 ## Installatie
 
-Fork taak van de homepagina > clone bestanden naar lokale omgeving > open in visual studio code > voer in de terminal ``npm run dev`` uit om de lokale server op te starten.
+Fork taak van de homepagina > 
+
+clone bestanden naar lokale omgeving > 
+
+open in visual studio code > 
+
+voer in de terminal ``npm run dev`` uit om de lokale server op te starten.
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
